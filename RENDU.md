@@ -15,19 +15,21 @@ Lien du dépôt GitHub :https://github.com/mickcouzinet/tp-bash
 Résultat de la commande `docker compose ps`, lancée sur le poste :
 
 ```text
-
+NAME      IMAGE         COMMAND            SERVICE   CREATED       STATUS       PORTS
+tp-bash   tp-bash:1.0   "sleep infinity"   labo      2 hours ago   Up 2 hours
 ```
 
 Résultat de la commande `id`, lancée dans la machine :
 
 ```text
-
+uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev)
 ```
 
 Résultat de la commande `git remote -v`, lancée sur le poste :
 
 ```text
-
+origin  https://github.com/mickcouzinet/tp-bash.git (fetch)
+origin  https://github.commit/mickcouzinet/tp-bash.git (push)
 ```
 
 ---
