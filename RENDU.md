@@ -37,26 +37,33 @@ Résultat de la commande `git remote -v`, lancée sur le poste :
 Résultat de `./init-projet.sh boutique` avec la saisie `5173` :
 
 ```text
-
+Port du front [5173] :                   
+Clé d'API : 
+Projet : boutique
+Front : http://localhost:5173
+API : http://localhost:5174
+Clé d'API : 18 caractères
 ```
 
 Contenu du fichier `boutique/README.md` créé par le script :
 
 ```text
-
+# boutique
+Créé le : 18/11/2026
+Machine : labo
 ```
 
 Question 1 : pourquoi faut-il écrire `./bonjour.sh` et pas simplement `bonjour.sh` pour lancer le script ?
 
-Réponse :
+Réponse :Car le ./ donne le chemin pour localiser le fichier.
 
 Question 2 : quelle différence observe-t-on entre `echo "$nom_projet"` et `echo '$nom_projet'` ? Pourquoi ?
 
-Réponse :
+Réponse :les guillemets remplaçent la variable par sa valeur, les apostrophes affichent le texte tel quel.
 
 Question 3 : expliquer avec ses propres mots ce que fait la ligne `port_api=$(( port_front + 1 ))`.
 
-Réponse :
+Réponse :$(( )) = calcul de nombres entiers. on calcule le port du front +1 et on range le résultat dans port api (à la place du $)
 
 ---
 
