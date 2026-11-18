@@ -75,18 +75,21 @@ Réponse :$(( )) = calcul de nombres entiers. on calcule le port du front +1 et 
 
 | Test | Prédiction | Résultat obtenu |
 |---|---|---|
-| 1. `[[ 8 > 10 ]]` | | |
-| 2. `[[ 8 -gt 10 ]]` | | |
-| 3. `[[ $branche == "main" \|\| $branche == release/* ]]` | | |
-| 4. `[[ $branche == "release/*" ]]` | | |
-| 5. `[[ $port -ge 1024 && $port -le 65535 ]]` | | |
-| 6. `[[ -f ../partie2/boutique/front ]]` | | |
-| 7. `[[ -s ../partie2/boutique/README.md ]]` | | |
-| 8. `[[ ! -e ../partie2/boutique/api/.env ]]` | | |
-| 9. `[[ -n $variable_inexistante ]]` | | |
-| 10. `[[ $branche != "main" ]]` | | |
+| 1. `[[ 8 > 10 ]]` |0 |0 |
+| 2. `[[ 8 -gt 10 ]]` |1|1 |
+| 3. `[[ $branche == "main" \|\| $branche == release/* ]]` |1 |0 |
+| 4. `[[ $branche == "release/*" ]]` |1 |1 |
+| 5. `[[ $port -ge 1024 && $port -le 65535 ]]` |0 |1 |
+| 6. `[[ -f ../partie2/boutique/front ]]` |0 |1 |
+| 7. `[[ -s ../partie2/boutique/README.md ]]` |0 |0 |
+| 8. `[[ ! -e ../partie2/boutique/api/.env ]]` |0 |1 |
+| 9. `[[ -n $variable_inexistante ]]` |1 |1 |
+| 10. `[[ $branche != "main" ]]` |0 |0 |
 
-Explication des écarts entre prédiction et résultat :
+Explication des écarts entre prédiction et résultat :pour la 3 je pensais que l'erreur annulait la vérité de branche==release/* 
+pour la 5, j'ai fais une erreur similaire avec la condition et je me suis emmêlé
+pour la 6, innatention entre fichier dossier m'a valu l'erreur
+enfin pour la 8, le ! a pas été considéré dans ma prédiction...
 
 ### Exercice check-env.sh
 
